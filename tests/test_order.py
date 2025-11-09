@@ -6,15 +6,10 @@ from pages.order_page import OrderPage
 from data import Users
 from locators.main_page_locators import SiteHeaderLocators
 
-def click_header(main_page):
-    main_page.click_order_button_header()
-
-def click_footer(main_page):
-    main_page.click_order_button_footer()
 
 test_data = [
-    (Users.user_1, click_header, "Заказ: пользователь 1, кнопка в шапке"),
-    (Users.user_2, click_footer, "Заказ: пользователь 2, кнопка внизу"),
+    (Users.user_1, MainPage.click_order_button_header, "Заказ: пользователь 1, кнопка в шапке"),
+    (Users.user_2, MainPage.click_order_button_footer, "Заказ: пользователь 2, кнопка внизу"),
 ]
 
 @allure.suite("Оформление заказа самоката")
