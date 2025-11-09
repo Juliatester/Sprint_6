@@ -30,3 +30,7 @@ class OrderPageLocators:
     metro_field = (By.XPATH, "//input[@placeholder='* Станция метро']")
     phone_field = (By.XPATH, "//input[@placeholder='* Телефон: на него позвонит курьер']")
     next_button = (By.XPATH, "//button[text()='Далее']")
+
+    metro_option = lambda subway: (
+        By.XPATH, f"//li[contains(@class, 'select-search__row')]//div[text()='{subway}']"
+    )

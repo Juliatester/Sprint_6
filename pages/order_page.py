@@ -18,7 +18,7 @@ class OrderPage(BasePage):
     @allure.step('Выбираем ближайшую станцию метро: {subway}')
     def choose_metro(self, subway):
         self.find(OrderPageLocators.metro_field).send_keys(subway)
-        self.wait_and_click((By.XPATH, f".//div[text()='{subway}']"))
+        self.wait_and_click(OrderPageLocators.metro_option(subway))
 
     @allure.step('Устанавливаем условия аренды самоката')
     def rent_info(self, user):
